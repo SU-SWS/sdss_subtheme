@@ -7,10 +7,37 @@ a {
   &::after {
     background-color: $sdss-color-palo-alto-dark;
   }
+
+  &.mailto {
+    svg {
+      fill: $sdss-color-palo-alto-dark;
+    }
+  }
 }
 
 .su-link--action {
   &::after {
     background-color: $sdss-color-palo-alto-dark;
+  }
+}
+
+// Icon colors
+.content {
+  .right-region {
+    .su-person-links {
+      a {
+        &::after {
+          background-color: $sdss-color-palo-alto-dark;
+        }
+      }
+    }
+  }
+}
+
+.su-local-footer__action-links {
+  a {
+    &:after {
+      background-color: $sdss-color-palo-alto-dark;
+    }
   }
 }
