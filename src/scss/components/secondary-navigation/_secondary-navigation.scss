@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.navigation {
+  &.menu--main {
+    position: sticky;
+    top: 140px;
+  }
+}
+
