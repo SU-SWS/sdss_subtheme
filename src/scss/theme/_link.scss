@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.su-link,
+a {
+  color: $sdss-color-palo-alto-dark;
+
+  &::after {
+    background-color: $sdss-color-palo-alto-dark;
+  }
+}
+
+.su-link--action {
+  &::after {
+    background-color: $sdss-color-palo-alto-dark;
+  }
+}

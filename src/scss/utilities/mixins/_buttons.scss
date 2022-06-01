@@ -14,3 +14,57 @@
   // Include the correct icon color mixin inside your mixins here
   //@include example--black-icons
 //}
+@mixin sdss-button--primary {
+  @include button-primary;
+  @include type-f;
+  @include padding(1.15rem 2.4rem 1.65rem);
+
+  background: $sdss-color-green-light;
+  border-radius: 30px;
+  color: $sdss-color-black;
+  font-weight: $su-font-regular;
+  line-height: 1.15;
+
+  &::after {
+    background-color: $sdss-color-black;
+  }
+}
+
+@mixin sdss-button--big {
+  @include button-big;
+
+  background: $sdss-color-green-light;
+  border-radius: 35px;
+  color: $sdss-color-black;
+
+  &::after {
+    background-color: $sdss-color-black;
+  }
+}
+
+@mixin sdss-button--secondary {
+  @include type-f;
+  @include padding(1.15rem 2.4rem 1.65rem);
+
+  box-shadow: none;
+  background: $su-color-white;
+  color: $sdss-color-palo-alto-dark;
+  border: 1px solid $sdss-color-palo-alto-dark;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: $su-font-regular;
+  line-height: 1.15;
+
+  &::after {
+    background-color: $sdss-color-palo-alto-dark;
+  }
+
+  // most hover and focus is handled in mixin referenced above
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    background-color: $su-color-white;
+    color: $sdss-color-palo-alto-dark;
+    text-decoration: underline;
+  }
+}
