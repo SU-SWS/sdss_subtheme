@@ -1,5 +1,5 @@
-# Stanford Starter Theme
+# Stanford SDSS Subtheme
 
-8.x-X.X
+1.x
 --------------------------------------------------------------------------------
 _Release Date: 202X-XX-XX_
