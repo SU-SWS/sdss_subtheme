@@ -68,3 +68,53 @@
     text-decoration: underline;
   }
 }
+
+
+// Button color mixins
+
+@mixin sdss-button-light-blue--primary {
+  @include button-primary;
+  @include type-f;
+  @include padding(1.15rem 2.4rem 1.65rem);
+
+  background: $sdss-color-blue-light;
+  border-radius: 30px;
+  color: $sdss-color-black;
+  font-weight: $su-font-regular;
+  line-height: 1.15;
+
+  &::after {
+    background-color: $sdss-color-black;
+  }
+}
+
+@mixin sdss-button-green--primary {
+  @include button-primary;
+  @include type-f;
+  @include padding(1.15rem 2.4rem 1.65rem);
+
+  background: $sdss-color-green-light;
+  border-radius: 30px;
+  color: $sdss-color-black;
+  font-weight: $su-font-regular;
+  line-height: 1.15;
+
+  &::after {
+    background-color: $sdss-color-black;
+  }
+}
+
+@mixin sdss-button-su-red--primary {
+  @include button-primary;
+  @include type-f;
+  @include padding(1.15rem 2.4rem 1.65rem);
+
+  background: $su-color-bright-red;
+  border-radius: 30px;
+  font-weight: $su-font-regular;
+  line-height: 1.15;
+
+  &::after {
+    background-color: $sdss-color-black;
+  }
+}

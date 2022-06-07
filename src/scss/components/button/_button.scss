@@ -18,3 +18,30 @@ a.su-link--external.su-button--big {
   @include sdss-button--big;
 
 }
+
+.sdss-wrapper--button-blue {
+  .su-card__button {
+    .su-button {
+      @include sdss-button-light-blue--primary;
+
+    }
+  }
+}
+
+.sdss-wrapper--button-green {
+  .su-card__button {
+    .su-button {
+      @include sdss-button-green--primary;
+
+    }
+  }
+}
+
+.sdss-wrapper--button-red {
+  .su-card__button {
+    .su-button {
+      @include sdss-button-su-red--primary;
+
+    }
+  }
+}
