@@ -28,9 +28,7 @@
 }
 
 @mixin sdss-button-primary--focus {
-  border-color: $sdss-color-palo-alto-dark;
-  border-width: 3px;
-  border-style: outset;
+  border: 3px solid $sdss-color-palo-alto-dark;
   background-color: $sdss-color-green-bright;
   box-shadow: none;
   color: $sdss-color-palo-alto-dark;
@@ -58,9 +56,7 @@
 }
 
 @mixin sdss-button-secondary--focus {
-  border-color: $sdss-color-palo-alto-dark;
-  border-width: 3px;
-  border-style: outset;
+  border: 3px solid $sdss-color-palo-alto-dark;
   background-color: transparent;
   box-shadow: none;
   color: $sdss-color-palo-alto-dark;
@@ -70,6 +66,35 @@
 @mixin sdss-button-secondary--active {
   background-color: $sdss-color-palo-alto-dark;
   color: $sdss-color-white;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+// Secondary Negative (used only on dark bg)
+// hover/focus/active/disabled buttons
+@mixin sdss-button-secondary-neg--hover {
+  background: $sdss-color-green-link;
+  border: none;
+  color: $sdss-color-white;
+  cursor: pointer;
+  text-decoration: none;
+
+  & svg.mailto {
+    fill: $sdss-color-white;
+  }
+}
+
+@mixin sdss-button-secondary-neg--focus {
+  border: 3px solid $sdss-color-white;
+  background-color: transparent;
+  box-shadow: none;
+  color: $sdss-color-white;
+  text-decoration: none;
+}
+
+@mixin sdss-button-secondary-neg--active {
+  background-color: $sdss-color-white;
+  color: $sdss-color-palo-alto-dark;
   box-shadow: none;
   text-decoration: none;
 }
@@ -124,6 +149,25 @@
   }
 }
 
+@mixin sdss-button--secondary-neg {
+  @include type-f;
+  @include padding(1.6rem 2.4rem 1.6rem);
+  @include sdss-button-secondary-neg--hover-and-focus;
+
+  box-shadow: none;
+  background: transparent;
+  color: $sdss-color-white;
+  border: 1px solid $sdss-color-white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: $su-font-regular;
+  line-height: 1.15;
+
+  &::after {
+    background-color: $sdss-color-white;
+  }
+}
+
 
 // Button color mixins
 @mixin sdss-button-green--primary {
@@ -144,14 +188,12 @@
 }
 
 @mixin sdss-button-blue--secondary {
-  @include button-primary;
-  @include sdss-button-primary--hover-and-focus;
+  @include button-secondary;
+  @include sdss-button-secondary--hover-and-focus;
   @include type-f;
   @include padding(1.6rem 2.4rem 1.6rem);
 
-  background: $sdss-color-green-bright;
   border-radius: 30px;
-  color: $sdss-color-black;
   font-weight: $su-font-regular;
   line-height: 1.15;
 
@@ -219,6 +261,32 @@
 
     &::after {
       background-color: $sdss-color-white;
+    }
+  }
+}
+
+@mixin sdss-button-secondary-neg--hover-and-focus {
+  &:hover {
+    @include sdss-button-secondary-neg--hover;
+
+    &::after {
+      background-color: $sdss-color-white;
+    }
+  }
+
+  &:focus {
+    @include sdss-button-secondary-neg--focus;
+
+    &::after {
+      background-color: $sdss-color-white;
+    }
+  }
+
+  &:active {
+    @include sdss-button-secondary-neg--active;
+
+    &::after {
+      background-color: $sdss-color-palo-alto-dark;
     }
   }
 }

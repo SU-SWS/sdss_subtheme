@@ -13,6 +13,12 @@ a.su-link--external.su-button--secondary {
 
 }
 
+.su-button--secondary-neg,
+a.su-link--external.su-button--secondary-neg {
+  @include sdss-button--secondary-neg;
+
+}
+
 .su-button--big,
 .su-button--big.su-link,
 a.su-link--external.su-button--big {
