@@ -12,8 +12,8 @@ card_variant_info:  # part of the key after the :
       description: Select the button color for displaying this card.
 #      default_value: su-card-wrapper--border-regular
       options:
-        sdss-wrapper--button-blue: Blue
-        sdss-wrapper--button-green: Green
+        sdss-wrapper--button-green: Primary
+        sdss-wrapper--secondary-button: Secondary
         sdss-wrapper--button-red: Stanford Red
     card_border_style:
       type: select

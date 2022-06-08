@@ -7,7 +7,8 @@ a.su-link--external.su-button {
 
 }
 
-.su-button--secondary {
+.su-button--secondary,
+a.su-link--external.su-button--secondary {
   @include sdss-button--secondary;
 
 }
@@ -19,10 +20,10 @@ a.su-link--external.su-button--big {
 
 }
 
-.sdss-wrapper--button-blue {
+.sdss-wrapper--secondary-button {
   .su-card__button {
     .su-button {
-      @include sdss-button-light-blue--primary;
+      @include sdss-button--secondary;
 
     }
   }
