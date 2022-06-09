@@ -38,7 +38,7 @@ a.su-link--external.su-button--big {
 .sdss-wrapper--button-green {
   .su-card__button {
     .su-button {
-      @include sdss-button-green--primary;
+      @include sdss-button--primary;
 
     }
   }

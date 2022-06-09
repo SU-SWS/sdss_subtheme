@@ -170,37 +170,6 @@
 
 
 // Button color mixins
-@mixin sdss-button-green--primary {
-  @include button-primary;
-  @include sdss-button-primary--hover-and-focus;
-  @include type-f;
-  @include padding(1.6rem 2.4rem 1.6rem);
-
-  background: $sdss-color-green-bright;
-  border-radius: 30px;
-  color: $sdss-color-black;
-  font-weight: $su-font-regular;
-  line-height: 1.15;
-
-  &::after {
-    background-color: $sdss-color-black;
-  }
-}
-
-@mixin sdss-button-blue--secondary {
-  @include button-secondary;
-  @include sdss-button-secondary--hover-and-focus;
-  @include type-f;
-  @include padding(1.6rem 2.4rem 1.6rem);
-
-  border-radius: 30px;
-  font-weight: $su-font-regular;
-  line-height: 1.15;
-
-  &::after {
-    background-color: $sdss-color-black;
-  }
-}
 
 @mixin sdss-button-su-red--primary {
   @include button-primary;
