@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+// Reusing the intro text class for the Display
+.su-wysiwyg-text {
+  p {
+    // Intro = Display
+    &.su-intro-text {
+      font-weight: $su-font-regular;
+      letter-spacing: -0.01em;
+
+      @include grid-media-max('sm') {
+        font-size: 46px;
+        line-height: 50px;
+      }
+
+      @include grid-media-min('md') {
+        font-size: 50px;
+        line-height: 56px;
+      }
+
+      @include grid-media-min('lg') {
+        font-size: 80px;
+        line-height: 88px;
+      }
+
+    }
+    // Splash = Block Quote Big
+    &.su-font-splash {
+      font-weight: $su-font-regular;
+      font-style: italic;
+      letter-spacing: -0.01em;
+
+      @include grid-media-max('sm') {
+        font-size: 32px;
+        line-height: 40px;
+      }
+
+      @include grid-media-min('md') {
+        font-size: 48px;
+        line-height: 60px;
+      }
+
+      @include grid-media-min('lg') {
+        font-size: 56px;
+        line-height: 120%;
+      }
+    }
+
+    // Quote Text = Block Quote Medium
+    &.su-quote-text {
+      font-weight: $su-font-regular;
+      font-style: italic;
+      letter-spacing: -0.01em;
+
+      @include grid-media-max('sm') {
+        font-size: 32px;
+        line-height: 40px;
+      }
+
+      @include grid-media-min('md') {
+        font-size: 48px;
+        line-height: 60px;
+      }
+
+      @include grid-media-min('lg') {
+        font-size: 56px;
+        line-height: 120%;
+      }
+    }
+
+    // Callout text = Block Quote Small
+    &.su-callout-text{
+      font-weight: $su-font-regular;
+      font-style: italic;
+      letter-spacing: 0.01em;
+
+      @include grid-media-max('sm') {
+        font-size: 18px;
+        line-height: 130%;
+      }
+
+      @include grid-media-min('md') {
+        font-size: 18px;
+        line-height: 130%;
+      }
+
+      @include grid-media-min('lg') {
+        font-size: 24px;
+        line-height: 140%;
+      }
+    }
+  }
+}

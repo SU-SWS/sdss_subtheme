@@ -3,6 +3,9 @@
 .su-card {
   .su-card__contents {
     >span {
+      // Superhead in cards
+      text-transform: uppercase;
+
       @include grid-media-min('lg') {
         font-size: 24px;
       }
