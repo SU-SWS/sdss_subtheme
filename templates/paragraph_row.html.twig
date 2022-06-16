@@ -15,8 +15,9 @@
  * @ingroup themeable
  */
 #}
+
 {% if content %}
-  <div{{ attributes.addClass('paragraph_row') }}>
+  <div class="paragraph_row {{ content.su_para_row_bgcolor[0]['#markup'] }}">
     {{- content -}}
   </div>
 {% endif %}
