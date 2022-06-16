@@ -1,25 +1,17 @@
 @charset "UTF-8";
 
-.page-content {
+// Override to main style.
+a {
+  color: $sdss-color-palo-alto-dark;
+  text-decoration: underline;
+  font-weight: $su-font-regular;
+}
+
+// Moving the focus out to keep out of main navigation
+#block-sdss-subtheme-content,
+footer {
   .su-link,
   a {
-    color: $sdss-color-palo-alto-dark;
-    text-decoration: underline;
-
-    &::after {
-      background-color: $sdss-color-palo-alto-dark;
-    }
-
-    &.mailto {
-      svg {
-        fill: $sdss-color-palo-alto-dark;
-      }
-    }
-
-    &:hover {
-      color: sdss-color-blue-hover;
-    }
-
     &:focus {
       color: $sdss-color-grey-dark;
       border: 1px solid $sdss-color-palo-alto-dark;
@@ -27,19 +19,63 @@
       border-radius: 30px;
       padding: 0 6px 1px;
     }
-
-    &:active {
-      color: $sdss-color-grey-dark;
-    }
-
-  }
-
-  .su-link--action {
-    &::after {
-      background-color: $sdss-color-palo-alto-dark;
+    &.su-button {
+      &:focus {
+        padding: 1.6rem 2.4rem;
+      }
     }
   }
 }
+
+// No focus on social media links.
+.su-local-footer__social-links {
+  .su-link {
+    &:focus {
+      border: none;
+    }
+  }
+}
+
+// Theme details not overrides.
+.su-link {
+  color: $sdss-color-palo-alto-dark;
+  outline-color: $sdss-color-palo-alto-dark;
+  text-decoration: underline;
+
+  &::after {
+    background-color: $sdss-color-palo-alto-dark;
+  }
+
+  &.mailto {
+    svg {
+      fill: $sdss-color-palo-alto-dark;
+    }
+  }
+
+  &:hover {
+    color: sdss-color-blue-hover;
+  }
+
+  &:focus {
+    color: $sdss-color-grey-dark;
+    border: 1px solid $sdss-color-palo-alto-dark;
+    background-color: transparent;
+    border-radius: 30px;
+    padding: 0 6px 1px;
+  }
+
+  &:active {
+    color: $sdss-color-grey-dark;
+  }
+
+}
+
+.su-link--action {
+  &::after {
+    background-color: $sdss-color-palo-alto-dark;
+  }
+}
+
 
 // Icon colors
 .content {

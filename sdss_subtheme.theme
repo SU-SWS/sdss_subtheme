@@ -20,7 +20,6 @@ function sdss_subtheme_theme_suggestions_block_alter(array &$suggestions, array 
   }
 }
 
-
 /**
  * Implements hook_preprocess_HOOK().
  */
@@ -42,8 +41,12 @@ function sdss_subtheme_preprocess_ds_entity_view(&$variables) {
   if ($paragraph->bundle() == 'stanford_banner') {
     sdss_subtheme_preprocess_banner($variables);
   }
-}
 
+  // Process Fields
+  if ($paragraph->bundle()) {
+    sdss_subtheme_preprocess_field($variables);
+  }
+}
 
 /**
  * Implements hook_preprocess_card().
@@ -82,4 +85,17 @@ function sdss_subtheme_preprocess_banner(&$variables) {
   // Add button color style class to card wrapper.
   $variables['attributes']['class'][] = $paragraph->getBehaviorSetting('react_paragraphs:banner_variant_info', 'banner_button_style', 'sdss-wrapper--button-red');
 }
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function sdss_subtheme_preprocess_field(&$variables) {
+
+ if ($variables['element']['#field_name'] == 'su_para_row_bgcolor') {
+    $variables['attributes']['class'][] = $variables['items'][0]['content']['#markup'];
+    $su_paragraph_row__bgcolor = $variables['items'][0]['content']['#markup'];
+  }
+}
+
+
 
