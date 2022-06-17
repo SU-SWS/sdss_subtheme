@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+// Define typography mixins here
+// Example: All mixin names should be prefaced with your abbreviation (saa, soe, ood, etc)
+
+
+@mixin sdss-display {
+  .su-font-splash {
+    font-weight: $su-font-regular;
+    font-style: italic;
+    letter-spacing: -0.01em;
+
+    @include grid-media-max('sm') {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    @include grid-media-min('md') {
+      font-size: 48px;
+      line-height: 60px;
+    }
+
+    @include grid-media-min('lg') {
+      font-size: 56px;
+      line-height: 120%;
+    }
+  }
+}

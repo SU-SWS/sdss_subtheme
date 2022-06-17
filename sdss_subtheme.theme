@@ -57,6 +57,9 @@ function sdss_subtheme_preprocess_card(&$variables) {
   // Add button color style class to card wrapper.
   $variables['attributes']['class'][] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_button_style', 'sdss-wrapper--button-green');
 
+  // Add card style class to card wrapper.
+  $variables['attributes']['class'][] = $paragraph->getBehaviorSetting('react_paragraphs:card_variant_info', 'card_style', 'sdss-card-wrapper--regular');
+
   $card_info = [];
 
   // Add card type class to card wrapper. 3rd variable provides the default card type.

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.sdss-card-wrapper--stat {
+  .su-card {
+    box-shadow: none;
+    border: none;
+  }
+
+  &.sdss-wrapper--button-green {
+    .su-card {
+      color: $su-color-white;
+      background-color: $sdss-color-palo-alto-dark;
+
+      h2 {
+        @include sdss-display;
+      }
+
+      span {
+      }
+    }
+  }
+}

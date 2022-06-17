@@ -26,24 +26,7 @@
     }
     // Splash = Block Quote Big
     &.su-font-splash {
-      font-weight: $su-font-regular;
-      font-style: italic;
-      letter-spacing: -0.01em;
-
-      @include grid-media-max('sm') {
-        font-size: 32px;
-        line-height: 40px;
-      }
-
-      @include grid-media-min('md') {
-        font-size: 48px;
-        line-height: 60px;
-      }
-
-      @include grid-media-min('lg') {
-        font-size: 56px;
-        line-height: 120%;
-      }
+      @include sdss-display;
     }
 
     // Quote Text = Block Quote Medium

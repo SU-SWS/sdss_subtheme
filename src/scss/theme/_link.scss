@@ -12,16 +12,24 @@ a {
 footer {
   .su-link,
   a {
+    outline-color: $sdss-color-palo-alto-dark;
+
     &:focus {
       color: $sdss-color-grey-dark;
       border: 1px solid $sdss-color-palo-alto-dark;
       background-color: transparent;
-      border-radius: 30px;
-      padding: 0 6px 1px;
+      padding: 0 3px 1px;
     }
     &.su-button {
       &:focus {
         padding: 1.6rem 2.4rem;
+      }
+    }
+    &.su-link--action {
+
+      &:focus {
+        border-radius: 30px;
+        padding: 0 6px 1px;
       }
     }
   }

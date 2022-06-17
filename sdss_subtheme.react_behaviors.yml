@@ -6,6 +6,14 @@ card_variant_info:  # part of the key after the :
   bundles:
     - paragraphs_type|stanford_card
   config:
+    card_style:
+      type: select
+      title: 'Card Style'
+      description: Select the card style.
+#      default_value: sdss-card-wrapper--regular
+      options:
+        sdss-card-wrapper--stat: Stat
+        sdss-card-wrapper--regular: Regular
     card_button_style:
       type: select
       title: 'Card Button Style'
@@ -14,7 +22,6 @@ card_variant_info:  # part of the key after the :
       options:
         sdss-wrapper--button-green: Primary
         sdss-wrapper--secondary-button: Secondary
-        # sdss-wrapper--button-red: Stanford Red
     card_border_style:
       type: select
       title: 'Card Border Style'
