@@ -5,72 +5,22 @@
   p {
     // Intro = Display
     &.su-intro-text {
-      font-weight: $su-font-regular;
-      letter-spacing: -0.01em;
-
-      @include grid-media-max('sm') {
-        font-size: 46px;
-        line-height: 50px;
-      }
-
-      @include grid-media-min('md') {
-        font-size: 50px;
-        line-height: 56px;
-      }
-
-      @include grid-media-min('lg') {
-        font-size: 80px;
-        line-height: 88px;
-      }
-
+      @include sdss-display;
     }
+
     // Splash = Block Quote Big
     &.su-font-splash {
-      @include sdss-display;
+      @include sdss-block-quote--big;
     }
 
     // Quote Text = Block Quote Medium
     &.su-quote-text {
-      font-weight: $su-font-regular;
-      font-style: italic;
-      letter-spacing: -0.01em;
-
-      @include grid-media-max('sm') {
-        font-size: 32px;
-        line-height: 40px;
-      }
-
-      @include grid-media-min('md') {
-        font-size: 48px;
-        line-height: 60px;
-      }
-
-      @include grid-media-min('lg') {
-        font-size: 56px;
-        line-height: 120%;
-      }
+      @include sdss-block-quote--med;
     }
 
     // Callout text = Block Quote Small
-    &.su-callout-text{
-      font-weight: $su-font-regular;
-      font-style: italic;
-      letter-spacing: 0.01em;
-
-      @include grid-media-max('sm') {
-        font-size: 18px;
-        line-height: 130%;
-      }
-
-      @include grid-media-min('md') {
-        font-size: 18px;
-        line-height: 130%;
-      }
-
-      @include grid-media-min('lg') {
-        font-size: 24px;
-        line-height: 140%;
-      }
+    &.su-callout-text {
+      @include sdss-block-quote--sm;
     }
   }
 }
