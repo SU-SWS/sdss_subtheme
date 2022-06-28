@@ -23,15 +23,48 @@
   width: 100%;
 }
 
+// Drop down menu
+.su-multi-menu .su-multi-menu__menu-lv2 {
+  padding-top: 1px;
+  padding-left: 1.2rem;
+  margin-left: -1.7rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  z-index: 101;
+  max-width: 30rem;
+}
+
 .su-multi-menu {
 
   // font set up
   .su-multi-menu__menu {
     .su-multi-menu__link {
+      border-bottom: none;
       color: $sdss-color-grey-dark;
       font-weight: $su-font-regular;
       font-size: 20px;
       line-height: 26px;
+
+      &:hover {
+        > span {
+          text-decoration: underline;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          background-color: $sdss-color-white;
+        }
+      }
+    }
+  }
+
+  // Color bar on the drop down menu
+  .su-multi-menu__item--current {
+    >.su-multi-menu__link {
+      &:before {
+        background-color: $sdss-color-white;
+      }
     }
   }
 
@@ -141,29 +174,40 @@
     .su-nav-toggle:before {
       content: "";
       background: $sdss-color-green-link url("#{$su-image-path}/caret-down-white.svg") no-repeat 50%/50%;
-      background-size: 15px;
-      border-radius: 19px;
-      height: 15px;
-      width: 15px;
+      // background-size: 15px;
+      // border-radius: 19px;
+      // Size of the container
+      height: 30px;
+      width: 30px;
       display: block;
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 5px;
+      right: 2px;
     }
   }
 }
 
-// Changing the toggle in menus below the -lv1.
+// // Changing the toggle in menus below the -lv1.
 @include grid-media-min('lg') {
   .su-multi-menu__menu-lv1 {
     .su-multi-menu__menu {
-      .su-nav-toggle:before {
-        content: "";
-        background: $sdss-color-white url("#{$su-image-path}/caret-down-black.svg") no-repeat center / 50%;
-        background-size: 15px;
-        border-radius: 19px;
-        top: 20px;
-        right: 20px;
+      .su-nav-toggle {
+        border: 3px solid pink;
+
+        &::before {
+
+          content: "";
+          background: $sdss-color-white url("#{$su-image-path}/caret-down-black.svg") no-repeat center / 50%;
+          background-size: 15px;
+          border-radius: 19px;
+          top: 5px;
+          right: 10px;
+        }
+
+        &[aria-expanded=true] {
+          top: 15px;
+          right: 17px;
+        }
       }
     }
   }
@@ -172,7 +216,11 @@
 .su-multi-menu.su-multi-menu--dropdowns {
   .su-multi-menu__menu {
     >.su-multi-menu__item--parent {
-      >.su-nav-toggle {
+      .su-nav-toggle {
+        overflow: visible;
+        width: 32px;
+        height: 32px;
+        top: 10px;
 
         &:active,
         &:focus,
@@ -184,10 +232,28 @@
           border-top: 0;
         }
 
+        // changing animation from toggle
+        &[aria-expanded=true] {
+          top: 15px;
+          right: 2px;
+        }
+
+        // &:focus,
+        // &:hover {
+
+        //   // transform: none;
+        // }
+
         &:hover {
           &::before {
-            background: $sdss-color-green-link url("#{$su-image-path}/caret-down-white.svg") no-repeat center / 50%;
+            background: transparent url("#{$su-image-path}/caret-down-black.svg") no-repeat center / 50%;
             border-radius: 19px;
+          }
+        }
+
+        &:hover[aria-expanded=false] {
+          &::before {
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.14);
           }
         }
 
