@@ -192,7 +192,7 @@
   .su-multi-menu__menu-lv1 {
     .su-multi-menu__menu {
       .su-nav-toggle {
-        border: 3px solid pink;
+        // border: 3px solid pink;
 
         &::before {
 
@@ -208,6 +208,61 @@
           top: 15px;
           right: 17px;
         }
+      }
+    }
+  }
+
+
+  .su-multi-menu.su-multi-menu--dropdowns {
+    .su-multi-menu__menu {
+
+      .su-multi-menu__menu-lv2 {
+        > .su-multi-menu__item--parent {
+          .su-nav-toggle::before {
+            background-color: orange;
+            right: 15px;
+            top: 5px;
+          }
+
+          .su-nav-toggle[aria-expanded=true] {
+            top: 10px;
+            right: 25px;
+          }
+
+          .su-nav-toggle:focus[aria-expanded=true]::before {
+            top: -2px;
+            right: 10px;
+            background-color: lime;
+          }
+
+        }
+      }
+    }
+  }
+
+  .su-multi-menu__menu-lv2 .su-multi-menu__item  {
+
+    .su-nav-toggle {
+      // border: 2px solid blue;
+
+      &[aria-expanded=true] {
+        top: 15px;
+        right: 17px;
+      }
+
+      &::before {
+
+        content: "";
+        background: $sdss-color-white url("#{$su-image-path}/caret-down-black.svg") no-repeat center / 50%;
+        background-size: 15px;
+        border-radius: 19px;
+        top: 5px;
+        right: 10px;
+      }
+
+      &[aria-expanded=true] {
+        top: 15px;
+        right: 17px;
       }
     }
   }
