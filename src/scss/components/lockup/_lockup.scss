@@ -18,3 +18,11 @@
     -webkit-text-stroke-width: 0.1px;
   }
 }
+
+// Local footer
+.su-local-footer {
+  .su-lockup__line5,
+  .su-lockup__line1 {
+    color: $sdss-color-white;
+  }
+}
