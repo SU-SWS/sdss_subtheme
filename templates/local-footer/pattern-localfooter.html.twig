@@ -1,5 +1,7 @@
 {% extends "@jumpstart_ui/components/local-footer/local-footer.html.twig" %}
 
+{# Removing the weblogin in the footer. Better way to do this? #}
+{%- set weblogin_url = "" -%}
 
 {% block contentcell1 %}
   <div class="sdss-footer--stay-connected">

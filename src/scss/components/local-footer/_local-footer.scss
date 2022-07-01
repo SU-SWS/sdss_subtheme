@@ -92,4 +92,10 @@ nav[aria-label^='footer'] {
       }
     }
   }
+
+  .su-local-footer__list-heading {
+    @include sdss-h5;
+
+    font-weight: $su-font-bold;
+  }
 }
