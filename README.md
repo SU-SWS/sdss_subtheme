@@ -1,3 +1,10 @@
+## THE SDSS subtheme HAS MOVED
+
+- The SDSS subtheme has been moved.
+- This repo and site is now essentially outdated and defunct.
+- The new repo is [SU-SWS/sdss_profile](https://github.com/SU-SWS/sdss_profile).
+- 08/15/2022
+
 # [Stanford SDSS](https://github.com/SU-SWS/sdss_subtheme)
 ##### Version: 9.x-1.0-dev
 
